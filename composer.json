@@ -1,5 +1,6 @@
 {
-    "name": "nimiq/php-utils",
+    "name": "nimiq/utils",
+    "version": "0.1.0",
     "description": "PHP Utilities for Nimiq",
     "keywords": ["nimiq", "blockchain"],
     "homepage": "https://github.com/nimiq/php-utils",
