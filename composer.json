@@ -1,0 +1,23 @@
+{
+    "name": "nimiq/php-utils",
+    "description": "PHP Utilities for Nimiq",
+    "type": "library",
+    "require": {
+        "php" : "^7.2",
+        "ext-sodium": "*",
+        "tuupola/base32": "^0.2.0"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Sören Schwert",
+            "email": "soeren@nimiq.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Nimiq\\Utils\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "6cc7094c5dfd7239db8ebc1b05392986",
+    "packages": [
+        {
+            "name": "tuupola/base32",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tuupola/base32.git",
+                "reference": "43a783c6eb3f125a5efdc9e22a97f6cc604f345e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tuupola/base32/zipball/43a783c6eb3f125a5efdc9e22a97f6cc604f345e",
+                "reference": "43a783c6eb3f125a5efdc9e22a97f6cc604f345e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "overtrue/phplint": "^0.2.1",
+                "paragonie/random_compat": "^2.0",
+                "phpbench/phpbench": "^0.13.0",
+                "phpunit/phpunit": "^4.8 || ^5.5 || ^6.5",
+                "squizlabs/php_codesniffer": "^2.5"
+            },
+            "suggest": {
+                "ext-gmp": "GMP extension provides the fastest encoding and decoding."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tuupola\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mika Tuupola",
+                    "email": "tuupola@appelsiini.net",
+                    "homepage": "https://appelsiini.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Base32 encoder and decoder for arbitrary data",
+            "homepage": "https://github.com/tuupola/base32",
+            "keywords": [
+                "base32"
+            ],
+            "time": "2019-05-05T08:28:12+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
