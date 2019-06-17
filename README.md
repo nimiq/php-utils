@@ -4,7 +4,7 @@ This is a collection of utility classes for working with Nimiq primitives in PHP
 
 ## Installation
 
-The Nimiq PHP Utilities are availabe via the Packagist package registry and can be installed with Composer:
+The Nimiq PHP Utilities are availabe via the [Packagist package registry](https://packagist.org/packages/nimiq/utils) and can be installed with [Composer](https://getcomposer.org):
 
 ```bash
 composer require nimiq/utils
