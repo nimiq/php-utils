@@ -33,7 +33,8 @@ $request = [
     'value' => 4500e5,
     'extraData' => 'Hello World!',
 ];
+$responseMethod = 'post';
 
-$redirectUrl = RpcUtils::prepareRedirectInvocation( $target, $id, $returnUrl, $command, [ $request ] );
+$redirectUrl = RpcUtils::prepareRedirectInvocation( $target, $id, $returnUrl, $command, [ $request ], $responseMethod );
 
 echo 'Redirect URL: ' . $redirectUrl . "\n";

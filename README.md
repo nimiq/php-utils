@@ -66,7 +66,7 @@ Verify a message signature for the given message and public key.
 ### RpcUtils
 
 ```php
-RpcUtils::prepareRedirectInvocation(string $targetURL, int $id, string $returnURL, string $command, array $args): string
+RpcUtils::prepareRedirectInvocation(string $targetURL, int $id, string $returnURL, string $command, array $args, string $responseMethod): string
 ```
 
 Generate a redirect URL with the parameters encoded in the URL fragment.
@@ -76,6 +76,7 @@ Generate a redirect URL with the parameters encoded in the URL fragment.
 - `$returnURL` The URl to redirect back to, when the requests succeeds or fails.
 - `$command` The name of the function that should be called.
 - `$args` An array of function arguments to pass to the called function.
+- `$responseMethod` How to receive the response: 'message' (postMessage), 'url' (GET redirect), or 'post' (POST redirect)
 
 >**Note:** Binary strings are not yet supported in `$args`!
 

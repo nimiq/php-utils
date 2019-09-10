@@ -8,7 +8,7 @@ use Nimiq\Utils\JSONUtils;
 
 class RpcUtils
 {
-    public static function prepareRedirectInvocation(string $targetURL, int $id, string $returnURL, string $command, array $args): string
+    public static function prepareRedirectInvocation(string $targetURL, int $id, string $returnURL, string $command, array $args, string $responseMethod): string
     {
         // Cut a potential fragment off the target URL
         $targetUrl = explode('#', $targetURL)[0];
@@ -17,6 +17,7 @@ class RpcUtils
             'id' => $id,
             'returnURL' => $returnURL,
             'command' => $command,
+            'responseMethod' => $responseMethod,
         ];
 
         if (is_array($args)) {
