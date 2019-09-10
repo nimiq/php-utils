@@ -19,6 +19,7 @@ The utility classes are available in the `Nimiq\Utils` namespace:
 ```php
 use Nimiq\Utils\AddressUtils;
 use Nimiq\Utils\SignatureUtils;
+use Nimiq\Utils\RpcUtils;
 ```
 
 To generate byte-encoded strings from HEX representations, you can use [`sodium_hex2bin()`](https://paragonie.com/book/pecl-libsodium/read/03-utilities-helpers.md#hex2bin), for example:
@@ -62,6 +63,22 @@ Verify a message signature for the given message and public key.
 - `$message` The plain-text representation of the message that the signature should be verified for.
 - `$public_key` A byte-encoded string representing the Nimiq public key of the signer.
 
+### RpcUtils
+
+```php
+RpcUtils::prepareRedirectInvocation(string $targetURL, int $id, string $returnURL, string $command, array $args): string
+```
+
+Generate a redirect URL with the parameters encoded in the URL fragment.
+
+- `$targetURL` The base URL to redirect to, including paths and query parameters (a fragment is discarded).
+- `$id` A numeric ID for the RPC request, must be >= 0.
+- `$returnURL` The URl to redirect back to, when the requests succeeds or fails.
+- `$command` The name of the function that should be called.
+- `$args` An array of function arguments to pass to the called function.
+
+>**Note:** Binary strings are not yet supported in `$args`!
+
 ## Development
 
 The sodium cryptographic methods are best documented in the developer's documentation: https://paragonie.com/book/pecl-libsodium.
@@ -86,4 +103,3 @@ The expected output is:
 Is valid: bool(true)
 Address:  NQ03 VDL0 TSF5 CFNX VNCL 4MGK 0BX7 150E VMXA
 ```
- 

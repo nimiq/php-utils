@@ -2,6 +2,11 @@
 
 require_once 'vendor/autoload.php';
 
+/**
+ * SignatureUtils
+ * AddressUtils
+ */
+
 use Nimiq\Utils\SignatureUtils;
 use Nimiq\Utils\AddressUtils;
 
@@ -11,3 +16,24 @@ $sign_public = sodium_hex2bin('873279e12d5af18c4e899a781e55711f7910ed8ddb85b2179
 
 echo 'Is valid: '; var_dump(SignatureUtils::verify_message($signature, $message, $sign_public));
 echo 'Address:  ' . AddressUtils::pubkey2address($sign_public) . "\n";
+
+
+/**
+ * RpcUtils
+ */
+
+use Nimiq\Utils\RpcUtils;
+
+$target = 'https://hub.nimiq-testnet.com';
+$id = 1234;
+$returnUrl = 'https://shop.nimiq-testnet.com';
+$command = 'checkout';
+$request = [
+    'recipient' => 'NQ07 A38E G81P 3QKU G1R1 6JT9 BTAR R8P8 FMFV',
+    'value' => 4500e5,
+    'extraData' => 'Hello World!',
+];
+
+$redirectUrl = RpcUtils::prepareRedirectInvocation( $target, $id, $returnUrl, $command, [ $request ] );
+
+echo 'Redirect URL: ' . $redirectUrl . "\n";

@@ -11,6 +11,9 @@
             "email": "soeren@nimiq.com"
         }
     ],
+    "scripts": {
+        "test": "php test/test.php"
+    },
     "require": {
         "php" : "^7.2",
         "ext-sodium": "*",
